@@ -1,0 +1,257 @@
+/* result로 넘어갈 때 display: block; */
+#result {
+  display: none;
+  min-height: 100vh;
+  /*box-shadow: #ddd 0px 0px 10px 5px;*/
+  background: rgb(252, 252, 252);
+  text-align: center;
+  word-break: keep-all;
+  opacity: 0;
+}
+#score-box {
+   margin-bottom: 50px;
+}
+#score-box > .title {
+  animation: fade-in 0.6s ease-out 0.4s forwards, 
+            going-down 0.6s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+.art {
+  margin-bottom: 40px;
+  width: 100%;
+  height: 90vh;
+  max-height: 700px;
+  box-shadow: #ddd 0px 0px 10px 5px;
+  background-color: #fff;
+  animation: fade-in 0.3s ease-out 1.2s both, 
+          going-down 0.3s ease-out 1.2s both;
+  opacity: 0;
+}
+.art > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.desc {
+  margin: 30px 7.5%;
+  width: 85%;
+  line-height: 28.8px;
+  line-height: 1.8rem;
+  font-size: 17.6px;
+  font-size: 2rem;
+  font-weight: 350;
+}
+#desc-box ~ p {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 24px;
+  font-size: 3rem;
+  font-weight: bolder;
+}
+.go-artist {
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.result .btn_wrap{
+  position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -86px;
+	margin-left: -89px;
+  text-align: center;
+}
+
+.result .btn_wrap .btn{
+	margin: 20px auto;
+	max-width: 180px;
+	text-decoration: none;
+	border-radius: 4px;
+	padding: 20px 30px;
+}
+
+.re-start {
+	color: rgba(30, 22, 54, 0.6);
+	box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 2px inset;
+}
+
+.re-start:hover {
+	color: rgba(255, 255, 255, 0.85);
+	box-shadow: rgba(30, 22, 54, 0.7) 0 0px 0px 40px inset;
+}
+
+.another-survey {
+	color: rgba(30, 22, 54, 0.6);
+	box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 2px inset;
+}
+
+.another-survey:hover {
+	color: rgba(255, 255, 255, 0.85);
+	box-shadow: rgba(30, 22, 54, 0.7) 0 80px 0px 2px inset;
+}
+
+/* media query */
+@media all and (min-width: 486px) {
+  .art {
+    max-height: 1100px;
+  }
+  .artist {
+    margin: 0 7.5% 30px 7.5%;
+  }
+  #share-box {
+    margin: 25px 20% 30px 20%;
+    width: 60%;
+  }
+  .hash {
+    padding: 20px 7.5% 0;
+  }
+  .artist {
+    font-size: 17.6px;
+    font-size: 1.1rem;
+  }
+  .caution {
+    padding: 5px 7.5%;
+  }
+  .caution > p {
+    line-height: 24px;
+    line-height: 1.5rem;
+    font-size: 16px;
+    font-size: 1rem;
+  }
+}
+
+@media all and (min-width: 768px) {
+  #score-box > .point {
+    font-size: 72px;
+    font-size: 4.5rem;
+  }
+  .pin {
+    width: 40px; 
+    height: 40px;
+  }
+  .art {
+    max-height: 1500px;
+  }
+  .desc {
+    margin: 30px 7.5%;
+    line-height: 32px;
+    line-height: 2rem;
+    font-size: 19.2px;
+    font-size: 1.2rem;
+  }
+  #share-box {
+    margin: 25px 30% 30px 30%;
+    width: 40%;
+  }
+  .hash {
+    padding: 25px 7.5% 0;
+    font-size: 17.6px;
+    font-size: 1.1rem;
+  }
+  .btn {
+    margin: 0 30% 10px 30%;
+  }
+  #intro-box {
+    padding-top: 45px;
+  }
+  .art-name {
+    margin: 20px 0 25px 0;
+  }
+  .artist {
+    margin-bottom: 40px;
+  }
+  .caution {
+    padding: 10px 7.5%;
+  }
+  .caution > p {
+    line-height: 27.2px;
+    line-height: 1.7rem;
+    font-size: 17.6px;
+    font-size: 1.1rem;
+  }
+  .go-origin {
+    margin: 20px 30% 0 30%;
+    width: 40%;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  #score-box > .point {
+    font-size: 80px;
+    font-size: 5rem;
+  }
+  .pin {
+    width: 50px; 
+    height: 50px;
+  }
+  .art {
+    margin: 0 5% 50px 5%;
+    width: 90%;
+    max-height: 2000px;
+  }
+  .desc {
+    font-size: 20.8px;
+    font-size: 1.3rem;
+  }
+  .go-artist {
+    font-size: 17.6px;
+    font-size: 1.1rem;
+  }
+  .caution {
+    padding: 15px 7.5%;
+  }
+  .hash {
+    font-size: 19.2px;
+    font-size: 2rem;
+  }
+  #share-box {
+    margin: 25px 35% 30px 35%;
+    width: 30%;
+  }
+  .btn {
+    margin: 0 35%;
+    width: 30%;
+  }
+  .btn > a {
+    font-size: 16px;
+    font-size: 1rem;
+  }
+  #intro-box {
+    padding-top: 20px;
+  }
+  .art-name {
+    margin: 20px 0 35px 0;
+  }
+  .go-origin {
+    margin: 25px 35% 0 35%;
+  }
+}
+
+@media all and (min-width: 1440px) {
+  #score-box > .point {
+    font-size: 88px;
+    font-size: 5.5rem;
+  }
+  .art {
+    max-height: 2000px;
+  }
+  .desc {
+    margin: 35px 5% 50px 5%;
+    width: 90%;
+    line-height: 33.6px;
+    line-height: 2.1rem;
+    font-size: 22.4px;
+    font-size: 2.5rem;
+  }
+  .caution {
+    padding: 20px 10%;
+  }
+  .caution > p {
+    line-height: 28.8px;
+    line-height: 1.8rem;
+    font-size: 19.2px;
+    font-size: 1.2rem;
+  }
+}
